@@ -38,6 +38,28 @@ $(function(){
     $("ul").append("<li>soy un parrafo </li>");
   });
 
-
-
 });
+ 
+$("#btn-Agregar-fila").on("click", function(){
+    const nombre = $("inputNombre").val();
+    const edad = $("inputEdad").VAL();
+    
+
+
+    if(nombre === "" || edad === ""){
+      alert("Por favot ingrese todos los datos del producto.");
+      return;
+    }
+    const nuevaFila = `
+                <tr>
+                    <td>${nombre}</td>
+                    <td>$${edad}</td>
+                    
+                </tr>
+            `;
+$("#cuerpo-tabla-productos").append(nuevafila);
+
+    $("#inputNombre").val(" ");
+    $("#inputEdad").val(" ");
+  });
+
