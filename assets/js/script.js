@@ -41,25 +41,23 @@ $(function(){
 });
  
 $("#btn-Agregar-fila").on("click", function(){
-    const nombre = $("inputNombre").val();
-    const edad = $("inputEdad").VAL();
+    const nombre = $("#inputNombre").val();
+    const edad = $("#inputEdad").val();
     
 
 
-    if(nombre === "" || edad === ""){
-      alert("Por favot ingrese todos los datos del producto.");
+    if(nombre === "" || edad === "" ){
+      alert("Por favor ingrese todos los datos del producto.");
       return;
     }
-    const nuevaFila = `
-                <tr>
-                    <td>${nombre}</td>
-                    <td>$${edad}</td>
-                    
-                </tr>
-            `;
-$("#cuerpo-tabla-productos").append(nuevafila);
+    const nuevaFila = ` <tr>
+            <td>${nombre}</td>
+            <td>${edad}</td>
+        </tr>`;
+            
+$("#cuerpo-tabla-productos").append(nuevaFila);
 
-    $("#inputNombre").val(" ");
-    $("#inputEdad").val(" ");
+    $("#inputNombre").val("");
+    $("#inputEdad").val("");
   });
 
